@@ -1,0 +1,32 @@
+import javax.swing.*;
+import java.util.Scanner;
+
+public class Main {
+    public static void main (String[] args){
+        int a,b,c;
+        
+        int InitialHouseCost1 = 67_000;
+        int InitialHouseCost2 = 62_000;
+        int InitialHouseCost3 = 75_000;
+        
+        int AnnualFuelCost1 = 2_300;
+        int AnnualFuelCost2 = 2_500;
+        int AnnualFuelCost3 = 1_850;
+        
+        double TaxRate1 = 0.025;
+        double TaxRate2 = 0.025;
+        double TaxRate3 = 0.020;
+        
+        double Tax1 = InitialHouseCost1*TaxRate1;
+        double Tax2 = InitialHouseCost2*TaxRate2;
+        double Tax3 = InitialHouseCost3*TaxRate3;
+        
+        int PriceOfHouse1 = (int) (InitialHouseCost1+(AnnualFuelCost1*5)+(Tax1*5));
+        int PriceOfHouse2 = (int) (InitialHouseCost2+(AnnualFuelCost2*5)+(Tax2*5));
+        int PriceOfHouse3 = (int) (InitialHouseCost3+(AnnualFuelCost3*5)+(Tax3*5));
+        
+        System.out.println("Price of house 1 : "+PriceOfHouse1);
+        System.out.println("Price of house 2 : "+PriceOfHouse2);
+        System.out.println("Price of house 3 : "+PriceOfHouse3);
+    }
+}
