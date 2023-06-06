@@ -1,0 +1,24 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+
+        System.out.println("Welcome to the board game!");
+        System.out.print("Player, please choose a number between 1 and 10: ");
+        int n = scanner.nextInt();
+
+        int r = random.nextInt(10) + 1;
+        int move;
+        if (n == 1) {
+            move = 1;
+            System.out.println("You chose 1. You always have the advantage!");
+        } else {
+            move = (r - n + 1) * n;
+            System.out.println("You chose " + n + ". The computer chose " + r + ".");
+            System.out.println("Your move is " + move + ".");
+        }
+    }
+}
